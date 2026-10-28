@@ -26,9 +26,6 @@ jobs:
           distribution: 'microsoft'
           cache: 'gradle'
 
-      - name: Setup Android SDK
-        uses: android-actions/setup-android@v3
-
       - name: Configure Build Properties
         run: |
           echo "" >> ./gradle.properties

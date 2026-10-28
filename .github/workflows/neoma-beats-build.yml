@@ -26,20 +26,19 @@ jobs:
           distribution: 'microsoft'
           cache: 'gradle'
 
-      - name: Configure Build Properties
+      - name: Configure Build Properties (FOSS mode, Disable Sentry)
         run: |
+          sed -i 's/isFullBuild=true/isFullBuild=false/g' ./gradle.properties || true
           echo "" >> ./gradle.properties
-          echo "isFullBuild=true" >> ./gradle.properties
-          echo "SENTRY_DSN=" > ./local.properties
-          echo "SENTRY_AUTH_TOKEN=" >> ./local.properties
-          echo "LASTFM_API_KEY=" >> ./local.properties
-          echo "LASTFM_SECRET=" >> ./local.properties
+          echo "isFullBuild=false" >> ./gradle.properties
+          echo "android.injected.build.model.only.versioned=3" >> ./gradle.properties
+          touch ./local.properties
 
       - name: Generate Library Definitions
-        run: ./gradlew exportLibraryDefinitions
+        run: ./gradlew exportLibraryDefinitions -PisFullBuild=false
 
       - name: Build Release APK
-        run: ./gradlew androidApp:assembleRelease --stacktrace
+        run: ./gradlew androidApp:assembleRelease -PisFullBuild=false --no-daemon --stacktrace
 
       - name: Sign APK with Neoma Keystore
         run: |

@@ -1,0 +1,88 @@
+﻿name: Build & Release Neoma Beats APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - 'dev'
+      - 'main'
+
+jobs:
+  build-neoma-beats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          submodules: 'recursive'
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: 21
+          distribution: 'microsoft'
+          cache: 'gradle'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Configure Build Properties
+        run: |
+          echo "" >> ./gradle.properties
+          echo "isFullBuild=true" >> ./gradle.properties
+          echo "SENTRY_DSN=" > ./local.properties
+          echo "SENTRY_AUTH_TOKEN=" >> ./local.properties
+          echo "LASTFM_API_KEY=" >> ./local.properties
+          echo "LASTFM_SECRET=" >> ./local.properties
+
+      - name: Generate Library Definitions
+        run: ./gradlew exportLibraryDefinitions
+
+      - name: Build Release APK
+        run: ./gradlew androidApp:assembleRelease --stacktrace
+
+      - name: Sign APK with Neoma Keystore
+        run: |
+          BUILD_TOOL_PATH=$(ls -d /usr/local/lib/android/sdk/build-tools/* | tail -n 1)
+          echo "Using Android Build Tools: $BUILD_TOOL_PATH"
+          
+          # Generate self-contained release keystore
+          keytool -genkey -v -keystore neoma-release.jks -alias neomabeats -keyalg RSA -keysize 2048 -validity 10000 -storepass neoma2026 -keypass neoma2026 -dname "CN=Neoma Beats, OU=Neoma Labs, O=Neoma Creative Hub, L=Solo, ST=Jawa Tengah, C=ID"
+          
+          # Find the unsigned release apk
+          RAW_APK=$(find androidApp/build/outputs/apk/release -name "*.apk" | head -n 1)
+          echo "Found generated APK: $RAW_APK"
+          
+          # Zipalign
+          $BUILD_TOOL_PATH/zipalign -v -p 4 "$RAW_APK" neoma-beats-aligned.apk
+          
+          # Sign
+          $BUILD_TOOL_PATH/apksigner sign --ks neoma-release.jks --ks-pass pass:neoma2026 --key-pass pass:neoma2026 --ks-key-alias neomabeats --out neoma-beats-v1.0.0-universal.apk neoma-beats-aligned.apk
+          
+          ls -la neoma-beats-v1.0.0-universal.apk
+
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: neoma-beats-v1.0.0-universal
+          path: neoma-beats-v1.0.0-universal.apk
+
+      - name: Publish to GitHub Release
+        uses: softprops/action-gh-release@v2
+        if: github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main'
+        with:
+          tag_name: v1.0.0
+          name: "Neoma Beats v1.0.0 (Official Rebranded Release)"
+          body: |
+            ## 🎵 Neoma Beats v1.0.0 (Official Release)
+            
+            - **Brand**: Official Neoma Beats Crescent Equalizer Moon Identity
+            - **Engine**: 100% Ad-Free YouTube Music Stream with Background Playback
+            - **Playback**: Anti-tamper restrictions bypassed for seamless streaming
+            - **Offline**: Download tracks directly to device
+          files: neoma-beats-v1.0.0-universal.apk
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

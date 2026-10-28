@@ -22,7 +22,7 @@ android {
     defaultConfig {
         applicationId = "com.maxrave.simpmusic"
         minSdk = 26
-        targetSdk = 36
+        targetSdk = 35
         versionCode =
             libs.versions.version.code
                 .get()
@@ -93,9 +93,7 @@ android {
             )
             splits {
                 abi {
-                    isEnable = true
-                    reset()
-                    isUniversalApk = true
+                    isEnable = false
                     include(*abis)
                 }
             }

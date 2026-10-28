@@ -169,7 +169,11 @@ import com.maxrave.simpmusic.ui.navigation.destination.library.LibraryDynamicPla
 import com.maxrave.simpmusic.ui.navigation.destination.list.ArtistDestination
 import com.maxrave.simpmusic.ui.navigation.destination.list.PodcastDestination
 import com.maxrave.simpmusic.ui.navigation.destination.list.PlaylistDestination
+import androidx.compose.material3.ButtonDefaults
 import com.maxrave.simpmusic.ui.navigation.destination.login.LoginDestination
+import com.maxrave.simpmusic.ui.navigation.destination.login.SpotifyLoginDestination
+import simpmusic.composeapp.generated.resources.log_in_to_spotify
+import simpmusic.composeapp.generated.resources.intro_login_to_spotify
 import com.maxrave.simpmusic.ui.screen.library.LibraryDynamicPlaylistType
 import com.maxrave.simpmusic.ui.theme.LocalLiquidGlassEnabled
 import com.maxrave.simpmusic.ui.theme.desktopPanelDark
@@ -715,9 +719,9 @@ fun HomeScreen(
             confirmButton = {
                 TextButton(onClick = {
                     viewModel.doneShowLogInAlert(doNotShowAgain)
-                    navController.navigate(LoginDestination)
+                    navController.navigate(SpotifyLoginDestination)
                 }) {
-                    Text(stringResource(Res.string.go_to_log_in_page))
+                    Text(stringResource(Res.string.log_in_to_spotify))
                 }
             },
             dismissButton = {
@@ -1274,8 +1278,25 @@ private fun HomeAccountButton(
                     navController.navigate(NotificationDestination)
                 },
             )
+            Button(
+                onClick = {
+                    menuOpen = false
+                    navController.navigate(SpotifyLoginDestination)
+                },
+                modifier =
+                    Modifier
+                        .fillMaxWidth()
+                        .padding(horizontal = 16.dp, vertical = 4.dp),
+                colors =
+                    ButtonDefaults.buttonColors(
+                        containerColor = Color(0xFF1DB954),
+                        contentColor = Color.White,
+                    ),
+            ) {
+                Text(stringResource(Res.string.log_in_to_spotify))
+            }
             if (!signedIn) {
-                Button(
+                TextButton(
                     onClick = {
                         menuOpen = false
                         navController.navigate(LoginDestination)
@@ -1283,7 +1304,7 @@ private fun HomeAccountButton(
                     modifier =
                         Modifier
                             .fillMaxWidth()
-                            .padding(horizontal = 16.dp, vertical = 4.dp),
+                            .padding(horizontal = 16.dp, vertical = 2.dp),
                 ) {
                     Text(stringResource(Res.string.log_in_to_YouTube), color = LocalContentColor.current)
                 }

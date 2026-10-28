@@ -1,4 +1,4 @@
-﻿name: Build & Release Neoma Beats APK
+name: Build & Release Neoma Beats APK
 
 on:
   workflow_dispatch:
@@ -48,9 +48,15 @@ jobs:
           # Generate self-contained release keystore
           keytool -genkey -v -keystore neoma-release.jks -alias neomabeats -keyalg RSA -keysize 2048 -validity 10000 -storepass neoma2026 -keypass neoma2026 -dname "CN=Neoma Beats, OU=Neoma Labs, O=Neoma Creative Hub, L=Solo, ST=Jawa Tengah, C=ID"
           
-          # Find the unsigned release apk
-          RAW_APK=$(find androidApp/build/outputs/apk/release -name "*.apk" | head -n 1)
-          echo "Found generated APK: $RAW_APK"
+          # Find the unsigned release apk (prioritize universal or standard release)
+          RAW_APK=$(find androidApp/build/outputs/apk/release -name "*universal*.apk" | head -n 1)
+          if [ -z "$RAW_APK" ]; then
+            RAW_APK=$(find androidApp/build/outputs/apk/release -name "*release*.apk" | head -n 1)
+          fi
+          if [ -z "$RAW_APK" ]; then
+            RAW_APK=$(find androidApp/build/outputs/apk/release -name "*.apk" | head -n 1)
+          fi
+          echo "Selected APK to sign: $RAW_APK"
           
           # Zipalign
           $BUILD_TOOL_PATH/zipalign -v -p 4 "$RAW_APK" neoma-beats-aligned.apk

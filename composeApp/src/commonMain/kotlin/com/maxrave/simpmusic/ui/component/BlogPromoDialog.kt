@@ -38,7 +38,7 @@ fun BlogPromoDialog(
         confirmButton = {
             TextButton(onClick = {
                 onVisitBlog.invoke()
-                uriHandler.openUri("https://www.simpmusic.org/blogs")
+                uriHandler.openUri("https://neoma.space")
             }) {
                 Text(
                     stringResource(Res.string.visit_blog),

@@ -132,7 +132,7 @@
     <string name="about_us">Про нас</string>
     <string name="version">Версія</string>
     <string name="github">Github</string>
-    <string name="maxrave_dev">maxrave-dev</string>
+    <string name="Neoma_dev">Neoma Creative Hub</string>
     <string name="follow_me_on_x">Слідкуйте за мною на X</string>
     <string name="buy_me_a_coffee">Купіть мені каву</string>
     <string name="developer_blog">Блог розробника</string>
@@ -295,7 +295,7 @@
     <string name="older_first">Спочатку старіші</string>
     <string name="newer_first">Спочатку новіші</string>
     <string name="added_date">Дата додавання</string>
-    <string name="credit_app">Простий музичний застосунок з використанням YouTube Music для бекенду \n\nNeoma Beats - це проєкт з відкритим вихідним кодом для потокової передачі музики з YouTube та YouTube Music без реклами та відстеження. Neoma Beats надає багато можливостей:\n\n - Потокова музика\n - Синхронізовані тексти\n - Персоналізація даних\n - тощо... \n\nNeoma Beats завжди безкоштовний і без реклами\n\nСтворено з ❤️ від Tuan Minh Nguyen Duc (maxrave-dev)</string>
+    <string name="credit_app">A simple music app using YouTube Music &amp; Spotify for backend \n\nNeoma Beats is a clean music streaming app without ads and tracking. Neoma Beats provides many features:\n\n - Streaming music \n - Spotify playlist &amp; library sync\n - Synced lyrics\n - Personalized data\n - etc… \n\nNeoma Beats is always free and no ads\n\nBuilt with ❤️ by Neoma Creative Hub (Solo Raya)</string>
     <string name="issue_tracker">Відстежувач випусків</string>
     <string name="featured_playlists">Рекомендовані плейлисти</string>
     <string name="featured_inArtist">Рекомендовано</string>

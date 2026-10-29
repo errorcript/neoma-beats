@@ -135,7 +135,7 @@
     <string name="about_us">Về tôi</string>
     <string name="version">Phiên bản</string>
     <string name="github">Github</string>
-    <string name="maxrave_dev">maxrave-dev</string>
+    <string name="Neoma_dev">Neoma Creative Hub</string>
     <string name="follow_me_on_x">Theo dõi tôi trên X</string>
     <string name="buy_me_a_coffee">Hỗ trợ tôi</string>
     <string name="developer_blog">Blog của nhà phát triển</string>
@@ -300,7 +300,7 @@
     <string name="older_first">Cũ trước</string>
     <string name="newer_first">Mới trước</string>
     <string name="added_date">Ngày thêm vào</string>
-    <string name="credit_app">Một ứng dụng âm nhạc đơn giản sử dụng dữ liệu từ YouTube Music \n\nNeoma Beats là một dự án nguồn mở để phát nhạc từ YouTube và YouTube Music mà không bị quảng cáo và theo dõi. Neoma Beats cung cấp nhiều tính năng:\n\n - Phát nhạc \n - Lời bài hát được đồng bộ hóa\n - Cá nhân hóa dữ liệu\n - v.v… \n\nNeoma Beats luôn miễn phí và không có quảng cáo\n\nXây dựng với ❤️ bởi Nguyên Đức Tuấn Minh (maxrave-dev)</string>
+    <string name="credit_app">A simple music app using YouTube Music &amp; Spotify for backend \n\nNeoma Beats is a clean music streaming app without ads and tracking. Neoma Beats provides many features:\n\n - Streaming music \n - Spotify playlist &amp; library sync\n - Synced lyrics\n - Personalized data\n - etc… \n\nNeoma Beats is always free and no ads\n\nBuilt with ❤️ by Neoma Creative Hub (Solo Raya)</string>
     <string name="issue_tracker">Theo dõi lỗi</string>
     <string name="featured_playlists">Danh sách phát nổi bật</string>
     <string name="featured_inArtist">Nổi bật</string>

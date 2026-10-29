@@ -314,7 +314,7 @@ internal inline fun <reified T> GridLibraryPlaylist(
                                     vertical = 16.dp,
                                 ),
                             onClick = {
-                                uriHandler.openUri("https://chart.simpmusic.org")
+                                uriHandler.openUri("https://beats.neoma.space")
                             },
                         )
                     }

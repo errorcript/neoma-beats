@@ -2559,18 +2559,18 @@ fun SettingScreen(
             SettingGroup(
                 title = stringResource(Res.string.backup),
                 footer = {
-                    val beforeUrl = stringResource(Res.string.import_data_intro).substringBefore("https://www.simpmusic.org/tools")
-                    val afterUrl = stringResource(Res.string.import_data_intro).substringAfter("https://www.simpmusic.org/tools")
+                    val beforeUrl = stringResource(Res.string.import_data_intro).substringBefore("https://beats.neoma.space")
+                    val afterUrl = stringResource(Res.string.import_data_intro).substringAfter("https://beats.neoma.space")
                     Text(
                         buildAnnotatedString {
                             append(beforeUrl)
                             withLink(
                                 LinkAnnotation.Url(
-                                    "https://www.simpmusic.org/tools",
+                                    "https://beats.neoma.space",
                                     TextLinkStyles(style = SpanStyle(color = MaterialTheme.colorScheme.primary)),
                                 ),
                             ) {
-                                append("https://www.simpmusic.org/tools")
+                                append("https://beats.neoma.space")
                             }
                             append(afterUrl)
                         },
@@ -2739,7 +2739,7 @@ fun SettingScreen(
                         if (updateChannel == DataStoreManager.FDROID) {
                             "F-Droid"
                         } else {
-                            "SimpMusic GitHub Release"
+                            "Neoma Beats GitHub Release"
                         },
                     onClick = {
                         viewModel.setAlertData(
@@ -2750,7 +2750,7 @@ fun SettingScreen(
                                         listSelect =
                                             listOf(
                                                 (updateChannel == DataStoreManager.FDROID) to "F-Droid",
-                                                (updateChannel == DataStoreManager.GITHUB) to "SimpMusic GitHub Release",
+                                                (updateChannel == DataStoreManager.GITHUB) to "Neoma Beats GitHub Release",
                                             ),
                                     ),
                                 confirm =
@@ -2758,7 +2758,7 @@ fun SettingScreen(
                                         viewModel.setUpdateChannel(
                                             when (state.selectOne?.getSelected()) {
                                                 "F-Droid" -> DataStoreManager.FDROID
-                                                "SimpMusic GitHub Release" -> DataStoreManager.GITHUB
+                                                "Neoma Beats GitHub Release" -> DataStoreManager.GITHUB
                                                 else -> DataStoreManager.GITHUB
                                             },
                                         )
@@ -2779,21 +2779,21 @@ fun SettingScreen(
                     title = stringResource(Res.string.author),
                     subtitle = stringResource(Res.string.maxrave_dev),
                     onClick = {
-                        uriHandler.openUri("https://github.com/maxrave-dev")
+                        uriHandler.openUri("https://github.com/errorcript")
                     },
                 )
                 SettingItem(
                     title = stringResource(Res.string.follow_me_on_x),
-                    subtitle = "@maxrave_dev",
+                    subtitle = "Neoma Hub",
                     onClick = {
-                        uriHandler.openUri("https://x.com/maxrave_dev")
+                        uriHandler.openUri("https://neoma.space")
                     },
                 )
                 SettingItem(
                     title = stringResource(Res.string.developer_blog),
                     subtitle = stringResource(Res.string.developer_blog_tagline),
                     onClick = {
-                        uriHandler.openUri("https://www.simpmusic.org/blogs")
+                        uriHandler.openUri("https://neoma.space")
                     },
                 )
                 if (getPlatform() == Platform.Android) {
@@ -2807,7 +2807,7 @@ fun SettingScreen(
                     title = stringResource(Res.string.buy_me_a_coffee),
                     subtitle = stringResource(Res.string.donation),
                     onClick = {
-                        uriHandler.openUri("https://github.com/sponsors/maxrave-dev")
+                        uriHandler.openUri("https://neoma.space")
                     },
                 )
                 SettingItem(

@@ -248,7 +248,7 @@ fun App(
                 // of it. The token is handed straight to the shared view model, and the screen
                 // closes itself when it sees a session key appear.
                 token?.let { viewModel.completeLastfmLogin(it) }
-            } else if (data.host == "simpmusic.org" || data.scheme == "simpmusic") {
+            } else if (data.host == "beats.neoma.space" || data.host == "neoma.space" || data.host == "simpmusic.org" || data.scheme == "simpmusic" || data.scheme == "neomabeats") {
                 // https://simpmusic.org/app/watch?v=VIDEO_ID
                 // https://simpmusic.org/app/playlist?list=PLAYLIST_ID
                 // https://simpmusic.org/app/channel/CHANNEL_ID
@@ -902,7 +902,7 @@ fun App(
                                 onClick = {
                                     shouldShowUpdateDialog = false
                                     viewModel.showedUpdateDialog = false
-                                    openUrl("https://simpmusic.org/download")
+                                    openUrl("https://github.com/errorcript/neoma-beats/releases")
                                 },
                             ) {
                                 Text(

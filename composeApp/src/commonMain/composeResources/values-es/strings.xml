@@ -127,7 +127,7 @@
     <string name="about_us">Sobre nosotros</string>
     <string name="version">Versión</string>
     <string name="github">GitHub</string>
-    <string name="maxrave_dev">maxrave-dev</string>
+    <string name="Neoma_dev">Neoma Creative Hub</string>
     <string name="follow_me_on_x">Sigueme en X</string>
     <string name="buy_me_a_coffee">Cómprame un café</string>
     <string name="developer_blog"></string>
@@ -289,7 +289,7 @@
     <string name="older_first">Primero antiguo</string>
     <string name="newer_first">Primero nuevo</string>
     <string name="added_date">Fecha añadida</string>
-    <string name="credit_app">Una aplicación de música sencilla que utiliza YouTube Music como backend \n\nNeoma Beats es un proyecto de código abierto para transmitir música desde YouTube y YouTube Music sin anuncios ni seguimiento. Neoma Beats ofrece muchas funciones:\n\n - Transmisión de música \n - Letras sincronizadas\n - Personalizar datos\n - etc... \n\nNeoma Beats es siempre gratuito y sin anuncios\n\nCompilado con ❤️ de Tuan Minh Nguyen Duc (maxrave-dev)</string>
+    <string name="credit_app">A simple music app using YouTube Music &amp; Spotify for backend \n\nNeoma Beats is a clean music streaming app without ads and tracking. Neoma Beats provides many features:\n\n - Streaming music \n - Spotify playlist &amp; library sync\n - Synced lyrics\n - Personalized data\n - etc… \n\nNeoma Beats is always free and no ads\n\nBuilt with ❤️ by Neoma Creative Hub (Solo Raya)</string>
     <string name="issue_tracker">Rastreador de errores</string>
     <string name="featured_playlists">Listas de reproducción destacadas</string>
     <string name="featured_inArtist">Destacado en</string>

@@ -650,7 +650,7 @@ fun SearchScreen(
                                     SimpMusicChartButton(
                                         modifier = Modifier.padding(top = 10.dp),
                                     ) {
-                                        uriHandler.openUri("https://chart.simpmusic.org")
+                                        uriHandler.openUri("https://beats.neoma.space")
                                     }
                                 }
                             }

@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "app": "Neoma Beats",
+  "promos": [],
+  "tidal": {
+    "client_id": "",
+    "client_secret": ""
+  }
+}

@@ -37,6 +37,18 @@ jobs:
       - name: Generate Library Definitions
         run: ./gradlew exportLibraryDefinitions -PisFullBuild=false
 
+            - name: Patch Core Service Endpoints (Neoma Release & Branding)
+        run: |
+          sed -i 's|https://api.github.com/repos/maxrave-dev/SimpMusic/releases/latest|https://api.github.com/repos/errorcript/neoma-beats/releases/latest|g' core/service/kotlinYtmusicScraper/src/commonMain/kotlin/com/maxrave/kotlinytmusicscraper/Ytmusic.kt || true
+          sed -i 's|https://raw.githubusercontent.com/maxrave-dev/simpmusic-files/refs/heads/main/remote-config.json|https://raw.githubusercontent.com/errorcript/neoma-beats/dev/remote-config.json|g' core/service/kotlinYtmusicScraper/src/commonMain/kotlin/com/maxrave/kotlinytmusicscraper/Ytmusic.kt || true
+          sed -i 's|https://raw.githubusercontent.com/maxrave-dev/simpmusic-files/refs/heads/main/remote-config-dev.json|https://raw.githubusercontent.com/errorcript/neoma-beats/dev/remote-config.json|g' core/service/kotlinYtmusicScraper/src/commonMain/kotlin/com/maxrave/kotlinytmusicscraper/Ytmusic.kt || true
+          sed -i 's|https://github.com/maxrave-dev/SimpMusic|https://github.com/errorcript/neoma-beats|g' core/data/src/commonMain/kotlin/com/maxrave/data/repository/UpdateRepositoryImpl.kt || true
+          sed -i 's|Listen on SimpMusic|Listen on Neoma Beats|g' core/service/kizzy/src/commonMain/kotlin/com/my/kizzy/DiscordRPC.kt || true
+          sed -i 's|Visit SimpMusic|Visit Neoma Beats|g' core/service/kizzy/src/commonMain/kotlin/com/my/kizzy/DiscordRPC.kt || true
+          sed -i 's|https://github.com/maxrave-dev/SimpMusic|https://github.com/errorcript/neoma-beats|g' core/service/kizzy/src/commonMain/kotlin/com/my/kizzy/DiscordRPC.kt || true
+          sed -i 's|https://simpmusic.org/app/|https://beats.neoma.space/|g' core/service/kizzy/src/commonMain/kotlin/com/my/kizzy/DiscordRPC.kt || true
+          sed -i 's|https://simpmusic.org/app/|https://beats.neoma.space/|g' core/service/kotlinYtmusicScraper/src/commonMain/kotlin/com/maxrave/kotlinytmusicscraper/models/YTItem.kt || true
+
       - name: Build Release APK
         run: ./gradlew androidApp:assembleRelease -PisFullBuild=false --no-daemon --stacktrace
 

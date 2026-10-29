@@ -33,7 +33,7 @@ import simpmusic.composeapp.generated.resources.footguns_promo_title
 import simpmusic.composeapp.generated.resources.give_a_star
 import simpmusic.composeapp.generated.resources.later
 
-private const val FOOTGUNS_REPO_URL = "https://github.com/maxrave-dev/kotlin-footguns"
+private const val FOOTGUNS_REPO_URL = "https://github.com/errorcript/neoma-beats"
 
 // GitHub renders this on demand for any public repo - repo name, description, avatar and the LIVE
 // star count, so the banner sells itself and stays current without shipping an asset.

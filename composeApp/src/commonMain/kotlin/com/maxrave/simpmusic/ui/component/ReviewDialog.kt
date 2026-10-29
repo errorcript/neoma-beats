@@ -43,7 +43,7 @@ fun ReviewDialog(
         confirmButton = {
             TextButton(onClick = {
                 onDoneReview.invoke()
-                uriHandler.openUri("https://github.com/maxrave-dev/SimpMusic")
+                uriHandler.openUri("https://github.com/errorcript/neoma-beats")
             }) {
                 Text(
                     stringResource(Res.string.give_a_star),
@@ -77,28 +77,28 @@ fun ReviewDialog(
                         append(stringResource(Res.string.if_you_enjoy_using_simpmusic_star_simpmusic_on_github_or_leave_a_review_on))
                         withLink(
                             LinkAnnotation.Url(
-                                "https://www.producthunt.com/products/simpmusic",
+                                "https://beats.neoma.space",
                                 TextLinkStyles(style = SpanStyle(textDecoration = TextDecoration.Underline, color = seed)),
                             ) {
                                 onDoneReview.invoke()
                                 onDismissRequest.invoke()
-                                uriHandler.openUri("https://www.producthunt.com/products/simpmusic")
+                                uriHandler.openUri("https://beats.neoma.space")
                             },
                         ) {
-                            append(" ProductHunt")
+                            append(" Neoma Beats")
                         }
                         append("\n")
                         // Every locale wraps this in quotes to keep the trailing space, Android style, and Compose
-                        // Resources prints them as text. Strip them and add the space here, like " ProductHunt" above.
+                        // Resources prints them as text. Strip them and add the space here, like " Neoma Beats" above.
                         append(stringResource(Res.string.if_you_love_my_work_consider).removeSurrounding("\"").trimEnd() + " ")
                         withLink(
                             LinkAnnotation.Url(
-                                "https://buymeacoffee.com/maxrave",
+                                "https://neoma.space",
                                 TextLinkStyles(style = SpanStyle(textDecoration = TextDecoration.Underline, color = seed)),
                             ) {
                                 onDoneReview.invoke()
                                 onDismissRequest.invoke()
-                                uriHandler.openUri("https://buymeacoffee.com/maxrave")
+                                uriHandler.openUri("https://neoma.space")
                             },
                         ) {
                             append(stringResource(Res.string.buying_me_a_coffee))
@@ -106,13 +106,13 @@ fun ReviewDialog(
                         append("\n")
                         withLink(
                             LinkAnnotation.Url(
-                                "https://x.com/maxrave_dev",
+                                "https://neoma.space",
                                 TextLinkStyles(style = SpanStyle(textDecoration = TextDecoration.Underline, color = seed)),
                             ) {
                                 onDoneReview.invoke()
                                 onDismissRequest.invoke()
                                 // openUrl rather than the uri handler, which throws where no browser answers.
-                                runCatching { openUrl("https://x.com/maxrave_dev") }
+                                runCatching { openUrl("https://neoma.space") }
                             },
                         ) {
                             append(stringResource(Res.string.follow_me_on_x))

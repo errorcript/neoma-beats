@@ -137,7 +137,7 @@
     <string name="about_us">Su di noi</string>
     <string name="version">Versione</string>
     <string name="github">Github</string>
-    <string name="Neoma_dev">Neoma Creative Hub</string>
+    <string name="maxrave_dev">Neoma Creative Hub</string>
     <string name="follow_me_on_x">Seguimi su X</string>
     <string name="buy_me_a_coffee">Offrimi un caffè</string>
     <string name="developer_blog">Blog degli sviluppatori</string>
@@ -500,8 +500,8 @@
     <string name="other_version">Altra versione</string>
     <string name="later">Dopo</string>
     <string name="give_a_star">Dai una stella</string>
-    <string name="enjoying_Neoma Beats">Divertiti con Neoma Beats</string>
-    <string name="if_you_enjoy_using_Neoma Beats_star_Neoma Beats_on_github_or_leave_a_review_on">Se ti piace usare Neoma Beats, stella Neoma Beats su GitHub o lasciare una recensione su</string>
+    <string name="enjoying_simpmusic">Divertiti con Neoma Beats</string>
+    <string name="if_you_enjoy_using_simpmusic_star_simpmusic_on_github_or_leave_a_review_on">Se ti piace usare Neoma Beats, stella Neoma Beats su GitHub o lasciare una recensione su</string>
     <string name="if_you_love_my_work_consider">"Se ami il mio lavoro, considera"</string>
     <string name="buying_me_a_coffee">di offrirmi un caffè.</string>
     <string name="fade_audio_effect">Effetto di dissolvenza audio</string>
@@ -563,8 +563,8 @@
     <string name="contributor_name">Nome del collaboratore</string>
     <string name="contributor_email">E-mail del collaboratore</string>
     <string name="anonymous">Anonimo</string>
-    <string name="Neoma Beats_lyrics">Testi di Neoma Beats</string>
-    <string name="lyrics_provider_Neoma Beats">Testi forniti da Neoma Beats Lyrics</string>
+    <string name="simpmusic_lyrics">Testi di Neoma Beats</string>
+    <string name="lyrics_provider_simpmusic">Testi forniti da Neoma Beats Lyrics</string>
     <string name="backup_in_progress">Duplicazione in corso</string>
     <string name="restore_in_progress">Ripristino in corso</string>
     <string name="backup_downloaded">Copia dei dati scaricati</string>
@@ -664,7 +664,7 @@
     <string name="local_tracking_description">Registra la cronologia di ascolto nel database locale</string>
     <string name="blog_notification_title">Notifiche post blog</string>
     <string name="blog_notification_description">Ricevi una notifica quando viene pubblicato un nuovo post sul blog</string>
-    <string name="Neoma Beats_charts">Classifica Neoma Beats</string>
+    <string name="simpmusic_charts">Classifica Neoma Beats</string>
     <string name="crossfading">Dissolvenza incrociata</string>
     <string name="your_320kbps_url">Il tuo URL 320kbps</string>
     <string name="your_320kbps_url_description">Lascia vuoto per scegliere automaticamente un URL di lavoro dal checker uptime.</string>

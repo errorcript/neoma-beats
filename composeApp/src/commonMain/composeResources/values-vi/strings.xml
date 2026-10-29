@@ -135,7 +135,7 @@
     <string name="about_us">Về tôi</string>
     <string name="version">Phiên bản</string>
     <string name="github">Github</string>
-    <string name="Neoma_dev">Neoma Creative Hub</string>
+    <string name="maxrave_dev">Neoma Creative Hub</string>
     <string name="follow_me_on_x">Theo dõi tôi trên X</string>
     <string name="buy_me_a_coffee">Hỗ trợ tôi</string>
     <string name="developer_blog">Blog của nhà phát triển</string>
@@ -513,8 +513,8 @@
     <string name="other_version">Phiên bản khác</string>
     <string name="later">Để sau</string>
     <string name="give_a_star">Tặng một sao</string>
-    <string name="enjoying_Neoma Beats">Yêu thích Neoma Beats</string>
-    <string name="if_you_enjoy_using_Neoma Beats_star_Neoma Beats_on_github_or_leave_a_review_on">Nếu bạn yêu thích Neoma Beats, sao Neoma Beats trên GitHub hoặc để lại một đánh giá trên</string>
+    <string name="enjoying_simpmusic">Yêu thích Neoma Beats</string>
+    <string name="if_you_enjoy_using_simpmusic_star_simpmusic_on_github_or_leave_a_review_on">Nếu bạn yêu thích Neoma Beats, sao Neoma Beats trên GitHub hoặc để lại một đánh giá trên</string>
     <string name="if_you_love_my_work_consider">"Nếu bạn cảm thấy yêu thích những gì tôi làm, có thể "</string>
     <string name="buying_me_a_coffee">mua cho tôi một ly cà phê.</string>
     <string name="footguns_promo_title">Mỗi cái bẫy tôi rơi vào</string>
@@ -584,8 +584,8 @@
     <string name="contributor_name">Tên người đóng góp</string>
     <string name="contributor_email">Email người đóng góp</string>
     <string name="anonymous">Ẩn danh</string>
-    <string name="Neoma Beats_lyrics">Neoma Beats Lyrics</string>
-    <string name="lyrics_provider_Neoma Beats">Lời bài hát được cung cấp bởi Neoma Beats Lyrics</string>
+    <string name="simpmusic_lyrics">Neoma Beats Lyrics</string>
+    <string name="lyrics_provider_simpmusic">Lời bài hát được cung cấp bởi Neoma Beats Lyrics</string>
     <string name="backup_in_progress">Đang sao lưu</string>
     <string name="restore_in_progress">Đang tiến hành khôi phục</string>
     <string name="backup_downloaded">Sao lưu dữ liệu đã tải xuống</string>
@@ -713,7 +713,7 @@
     <string name="local_tracking_description">Ghi lại lịch sử nghe nhạc vào cơ sở dữ liệu cục bộ</string>
     <string name="blog_notification_title">Thông báo về các bài blog mới</string>
     <string name="blog_notification_description">Nhận thông báo khi có bài blog mới được phát hành</string>
-    <string name="Neoma Beats_charts">Neoma Beats Charts</string>
+    <string name="simpmusic_charts">Neoma Beats Charts</string>
     <string name="crossfading">Đang chuyển bài mượt mà</string>
     <string name="your_320kbps_url">Đường dẫn link 320kbps của bạn</string>
     <string name="your_320kbps_url_description">Để trống để tự động chọn một URL hoạt động từ hệ thống kiểm tra.</string>

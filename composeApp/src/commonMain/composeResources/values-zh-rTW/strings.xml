@@ -130,7 +130,7 @@
     <string name="about_us">關於我們</string>
     <string name="version">版本</string>
     <string name="github">Github</string>
-    <string name="Neoma_dev">Neoma Creative Hub</string>
+    <string name="maxrave_dev">Neoma Creative Hub</string>
     <string name="follow_me_on_x">在X上追蹤我</string>
     <string name="buy_me_a_coffee">求贊助QAQ</string>
     <string name="developer_blog">部落格</string>
@@ -499,8 +499,8 @@
     <string name="other_version">其他版本</string>
     <string name="later">以後再說</string>
     <string name="give_a_star">給個星吧</string>
-    <string name="enjoying_Neoma Beats">享受Neoma Beats</string>
-    <string name="if_you_enjoy_using_Neoma Beats_star_Neoma Beats_on_github_or_leave_a_review_on">如果你享受使用Neoma Beats，就在GitHub給個星或者評論吧</string>
+    <string name="enjoying_simpmusic">享受Neoma Beats</string>
+    <string name="if_you_enjoy_using_simpmusic_star_simpmusic_on_github_or_leave_a_review_on">如果你享受使用Neoma Beats，就在GitHub給個星或者評論吧</string>
     <string name="if_you_love_my_work_consider">"若你認可我的工作，考慮 "</string>
     <string name="buying_me_a_coffee">請我喝杯咖啡。</string>
     <string name="footguns_promo_title">我跌入的每個陷阱</string>
@@ -563,8 +563,8 @@
     <string name="contributor_name">貢獻者姓名或稱謂</string>
     <string name="contributor_email">貢獻者電子郵件</string>
     <string name="anonymous">匿名</string>
-    <string name="Neoma Beats_lyrics">Neoma Beats 歌詞資料庫</string>
-    <string name="lyrics_provider_Neoma Beats">歌詞由 Neoma Beats 歌詞資料庫提供</string>
+    <string name="simpmusic_lyrics">Neoma Beats 歌詞資料庫</string>
+    <string name="lyrics_provider_simpmusic">歌詞由 Neoma Beats 歌詞資料庫提供</string>
     <string name="backup_in_progress">正在準備備份</string>
     <string name="restore_in_progress">正在準備還原</string>
     <string name="backup_downloaded">備份已下載的資料</string>
@@ -692,7 +692,7 @@
     <string name="local_tracking_description">將您的收聽歷史記錄到本機資料庫</string>
     <string name="blog_notification_title">部落格文章通知</string>
     <string name="blog_notification_description">在新文章發佈時接收通知</string>
-    <string name="Neoma Beats_charts">Neoma Beats排行榜</string>
+    <string name="simpmusic_charts">Neoma Beats排行榜</string>
     <string name="crossfading">交叉淡入淡出</string>
     <string name="your_320kbps_url">您的 320kbps URL</string>
     <string name="your_320kbps_url_description">保持空白以自動選擇上一次工作中的URL。</string>

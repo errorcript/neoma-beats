@@ -129,7 +129,7 @@
     <string name="about_us">O nas</string>
     <string name="version">Wersja</string>
     <string name="github">Github</string>
-    <string name="Neoma_dev">Neoma Creative Hub</string>
+    <string name="maxrave_dev">Neoma Creative Hub</string>
     <string name="follow_me_on_x">Obserwuj mnie na X</string>
     <string name="buy_me_a_coffee">Kup mi kawę</string>
     <string name="developer_blog">Blog dewelopera</string>
@@ -460,8 +460,8 @@
     <string name="other_version">Inne wersje</string>
     <string name="later">Później</string>
     <string name="give_a_star">Daj gwiazdkę</string>
-    <string name="enjoying_Neoma Beats">Ciesz się Neoma Beats</string>
-    <string name="if_you_enjoy_using_Neoma Beats_star_Neoma Beats_on_github_or_leave_a_review_on">Jeśli lubisz używać Neoma Beats, zostaw gwiazdkę na GitHub lub zostaw recenzję na</string>
+    <string name="enjoying_simpmusic">Ciesz się Neoma Beats</string>
+    <string name="if_you_enjoy_using_simpmusic_star_simpmusic_on_github_or_leave_a_review_on">Jeśli lubisz używać Neoma Beats, zostaw gwiazdkę na GitHub lub zostaw recenzję na</string>
     <string name="if_you_love_my_work_consider">"Jeśli kochasz moją pracę, rozważ "</string>
     <string name="buying_me_a_coffee">postawienie mi kawy.</string>
     <string name="fade_audio_effect">Efekt zanikania dźwięku</string>
@@ -506,8 +506,8 @@
     <string name="contributor_name">Nazwa kontrybutora</string>
     <string name="contributor_email">E-mail kontrybutora</string>
     <string name="anonymous">Anonimowy</string>
-    <string name="Neoma Beats_lyrics">Teksty Neoma Beats</string>
-    <string name="lyrics_provider_Neoma Beats">Tekst dostarczony przez Teksty Neoma Beats</string>
+    <string name="simpmusic_lyrics">Teksty Neoma Beats</string>
+    <string name="lyrics_provider_simpmusic">Tekst dostarczony przez Teksty Neoma Beats</string>
     <string name="backup_in_progress">Kopia zapasowa w toku</string>
     <string name="restore_in_progress">Przywracanie w toku</string>
     <string name="backup_downloaded">Utwórz kopię zapasową pobranych danych</string>

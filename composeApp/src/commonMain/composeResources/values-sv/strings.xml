@@ -137,7 +137,7 @@
     <string name="about_us">Om oss</string>
     <string name="version">Version</string>
     <string name="github">GitHub</string>
-    <string name="Neoma_dev">Neoma Creative Hub</string>
+    <string name="maxrave_dev">Neoma Creative Hub</string>
     <string name="follow_me_on_x">Följ mig på X</string>
     <string name="buy_me_a_coffee">Bjud mig på en kaffe</string>
     <string name="developer_blog">Utvecklarblogg</string>
@@ -516,8 +516,8 @@
     <string name="other_version">Annan version</string>
     <string name="later">Senare</string>
     <string name="give_a_star">Ge en stjärna</string>
-    <string name="enjoying_Neoma Beats">Gillar du Neoma Beats?</string>
-    <string name="if_you_enjoy_using_Neoma Beats_star_Neoma Beats_on_github_or_leave_a_review_on">Om du gillar Neoma Beats kan du ge projektet en stjärna på GitHub eller lämna en recension på</string>
+    <string name="enjoying_simpmusic">Gillar du Neoma Beats?</string>
+    <string name="if_you_enjoy_using_simpmusic_star_simpmusic_on_github_or_leave_a_review_on">Om du gillar Neoma Beats kan du ge projektet en stjärna på GitHub eller lämna en recension på</string>
     <string name="if_you_love_my_work_consider">"Om du uppskattar mitt arbete kan du överväga att "</string>
     <string name="buying_me_a_coffee">bjuda mig på en kaffe.</string>
     <string name="footguns_promo_title">Alla fallgropar jag hamnade i</string>
@@ -587,8 +587,8 @@
     <string name="contributor_name">Bidragsgivarens namn</string>
     <string name="contributor_email">Bidragsgivarens e-postadress</string>
     <string name="anonymous">Anonym</string>
-    <string name="Neoma Beats_lyrics">Neoma Beats Lyrics</string>
-    <string name="lyrics_provider_Neoma Beats">Låttexter tillhandahålls av Neoma Beats Lyrics</string>
+    <string name="simpmusic_lyrics">Neoma Beats Lyrics</string>
+    <string name="lyrics_provider_simpmusic">Låttexter tillhandahålls av Neoma Beats Lyrics</string>
     <string name="backup_in_progress">Säkerhetskopiering pågår</string>
     <string name="restore_in_progress">Återställning pågår</string>
     <string name="backup_downloaded">Säkerhetskopiera hämtade data</string>
@@ -716,7 +716,7 @@
     <string name="local_tracking_description">Spara din lyssningshistorik i den lokala databasen</string>
     <string name="blog_notification_title">Aviseringar om blogginlägg</string>
     <string name="blog_notification_description">Få en avisering när ett nytt blogginlägg publiceras</string>
-    <string name="Neoma Beats_charts">Neoma Beats-topplistor</string>
+    <string name="simpmusic_charts">Neoma Beats-topplistor</string>
     <string name="crossfading">Övertoning</string>
     <string name="your_320kbps_url">Din webbadress för 320 kbit/s</string>
     <string name="your_320kbps_url_description">Lämna tomt för att automatiskt välja en fungerande webbadress med hjälp av drifttidskontrollen.</string>

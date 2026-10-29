@@ -132,7 +132,7 @@
     <string name="about_us">Про нас</string>
     <string name="version">Версія</string>
     <string name="github">Github</string>
-    <string name="Neoma_dev">Neoma Creative Hub</string>
+    <string name="maxrave_dev">Neoma Creative Hub</string>
     <string name="follow_me_on_x">Слідкуйте за мною на X</string>
     <string name="buy_me_a_coffee">Купіть мені каву</string>
     <string name="developer_blog">Блог розробника</string>
@@ -507,8 +507,8 @@
     <string name="other_version">Інші версії</string>
     <string name="later">Пізніше</string>
     <string name="give_a_star">Дати зірку</string>
-    <string name="enjoying_Neoma Beats">Подобається Neoma Beats</string>
-    <string name="if_you_enjoy_using_Neoma Beats_star_Neoma Beats_on_github_or_leave_a_review_on">Якщо вам подобається користуватися Neoma Beats, оцініть Neoma Beats на GitHub, або залиште свій відгук на</string>
+    <string name="enjoying_simpmusic">Подобається Neoma Beats</string>
+    <string name="if_you_enjoy_using_simpmusic_star_simpmusic_on_github_or_leave_a_review_on">Якщо вам подобається користуватися Neoma Beats, оцініть Neoma Beats на GitHub, або залиште свій відгук на</string>
     <string name="if_you_love_my_work_consider">"Якщо ви любите мою роботу, подумайте "</string>
     <string name="buying_me_a_coffee">купити мені каву.</string>
     <string name="footguns_promo_title">Пастки у які потрапив</string>
@@ -571,8 +571,8 @@
     <string name="contributor_name">Ім'я учасника</string>
     <string name="contributor_email">Електронна пошта учасника</string>
     <string name="anonymous">Анонімно</string>
-    <string name="Neoma Beats_lyrics">Тексти пісень Neoma Beats</string>
-    <string name="lyrics_provider_Neoma Beats">Тексти пісень надано Neoma Beats Lyrics</string>
+    <string name="simpmusic_lyrics">Тексти пісень Neoma Beats</string>
+    <string name="lyrics_provider_simpmusic">Тексти пісень надано Neoma Beats Lyrics</string>
     <string name="backup_in_progress">Виконується резервне копіювання</string>
     <string name="restore_in_progress">Виконується відновлення</string>
     <string name="backup_downloaded">Резервне копіювання завантажених даних</string>
@@ -700,7 +700,7 @@
     <string name="local_tracking_description">Запис історії прослуховування в локальну базу даних</string>
     <string name="blog_notification_title">Сповіщення про публікації в блозі</string>
     <string name="blog_notification_description">Отримуйте сповіщення про публікацію нової публікації в блозі</string>
-    <string name="Neoma Beats_charts">Чарти Neoma Beats</string>
+    <string name="simpmusic_charts">Чарти Neoma Beats</string>
     <string name="crossfading">Кроссфейдинг</string>
     <string name="your_320kbps_url">Ваша URL-адреса 320 Кбіт/с</string>
     <string name="your_320kbps_url_description">Залиште поле порожнім, щоб автоматично вибрати робочу URL-адресу з перевірки часу безперебійної роботи.</string>

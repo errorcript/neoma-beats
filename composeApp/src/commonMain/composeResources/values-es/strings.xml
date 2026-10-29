@@ -127,7 +127,7 @@
     <string name="about_us">Sobre nosotros</string>
     <string name="version">Versión</string>
     <string name="github">GitHub</string>
-    <string name="Neoma_dev">Neoma Creative Hub</string>
+    <string name="maxrave_dev">Neoma Creative Hub</string>
     <string name="follow_me_on_x">Sigueme en X</string>
     <string name="buy_me_a_coffee">Cómprame un café</string>
     <string name="developer_blog"></string>
@@ -496,8 +496,8 @@
     <string name="other_version">Otras versiones</string>
     <string name="later">Más tarde</string>
     <string name="give_a_star">Dar una estrella</string>
-    <string name="enjoying_Neoma Beats">Disfrutando Neoma Beats</string>
-    <string name="if_you_enjoy_using_Neoma Beats_star_Neoma Beats_on_github_or_leave_a_review_on">Si te gusta usar Neoma Beats, da una estrella a Neoma Beats en gituhb o deja una reseña</string>
+    <string name="enjoying_simpmusic">Disfrutando Neoma Beats</string>
+    <string name="if_you_enjoy_using_simpmusic_star_simpmusic_on_github_or_leave_a_review_on">Si te gusta usar Neoma Beats, da una estrella a Neoma Beats en gituhb o deja una reseña</string>
     <string name="if_you_love_my_work_consider">"Si amas mi trabajo, considera "</string>
     <string name="buying_me_a_coffee">comprame un café.</string>
     <string name="footguns_promo_title">Every trap I fell into</string>
@@ -556,8 +556,8 @@
     <string name="contributor_name">Nombre del contribuidor</string>
     <string name="contributor_email">Correo del contribuidor</string>
     <string name="anonymous">Anónimo</string>
-    <string name="Neoma Beats_lyrics">Neoma Beats Lyrics</string>
-    <string name="lyrics_provider_Neoma Beats">Letras proporcionadas por Neoma Beats Lyrics</string>
+    <string name="simpmusic_lyrics">Neoma Beats Lyrics</string>
+    <string name="lyrics_provider_simpmusic">Letras proporcionadas por Neoma Beats Lyrics</string>
     <string name="backup_in_progress">Copia de seguridad en curso</string>
     <string name="restore_in_progress">Restauración en curso</string>
     <string name="backup_downloaded">Respaldar datos descargados</string>
@@ -667,7 +667,7 @@
     <string name="local_tracking_description">Registra tu historial de escucha en la base de datos local</string>
     <string name="blog_notification_title">Notificaciones de publicaciones del blog</string>
     <string name="blog_notification_description">Recibe una notificación cuando se publique una nueva entrada del blog</string>
-    <string name="Neoma Beats_charts">Gráficos Neoma Beats</string>
+    <string name="simpmusic_charts">Gráficos Neoma Beats</string>
     <string name="crossfading">Crossfade</string>
     <string name="your_320kbps_url">Su URL de 320kbps</string>
     <string name="your_320kbps_url_description">Dejar en blanco para elegir automáticamente una URL funcional desde la comprobación de tiempo de activación.</string>

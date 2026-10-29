@@ -121,7 +121,7 @@
     <string name="about_us">Hakkımızda</string>
     <string name="version">Sürüm</string>
     <string name="github">GitHub</string>
-    <string name="Neoma_dev">Neoma Creative Hub</string>
+    <string name="maxrave_dev">Neoma Creative Hub</string>
     <string name="buy_me_a_coffee">Bana bir kahve ısmarla</string>
     <string name="paypal">PayPal</string>
     <string name="title">Başlık</string>
@@ -431,8 +431,8 @@
     <string name="other_version">Başka versiyon</string>
     <string name="later">Daha sonra</string>
     <string name="give_a_star">Yıldız bırak</string>
-    <string name="enjoying_Neoma Beats">Neoma Beats'in keyfini çıkarın</string>
-    <string name="if_you_enjoy_using_Neoma Beats_star_Neoma Beats_on_github_or_leave_a_review_on">Neoma Beats'i kullanmaktan hoşlanıyorsanız, GitHub'da Neoma Beats'i yıldızlayın veya</string>
+    <string name="enjoying_simpmusic">Neoma Beats'in keyfini çıkarın</string>
+    <string name="if_you_enjoy_using_simpmusic_star_simpmusic_on_github_or_leave_a_review_on">Neoma Beats'i kullanmaktan hoşlanıyorsanız, GitHub'da Neoma Beats'i yıldızlayın veya</string>
     <string name="if_you_love_my_work_consider">"Eğer çalışmalarımı seviyorsanız"</string>
     <string name="buying_me_a_coffee">bana bir kavhe ısmarla.</string>
     <string name="fade_audio_effect">Ses efektini soldur</string>
@@ -485,8 +485,8 @@
     <string name="contributor_name">Katkıda bulunanın adı</string>
     <string name="contributor_email">Katkıda bulunanın e-postası</string>
     <string name="anonymous">Anonim</string>
-    <string name="Neoma Beats_lyrics">Neoma Beats Şarkı Sözleri</string>
-    <string name="lyrics_provider_Neoma Beats">Şarkı sözleri Neoma Beats tarafından sağlanmıştır</string>
+    <string name="simpmusic_lyrics">Neoma Beats Şarkı Sözleri</string>
+    <string name="lyrics_provider_simpmusic">Şarkı sözleri Neoma Beats tarafından sağlanmıştır</string>
     <string name="backup_in_progress">Yedekleme devam ediyor</string>
     <string name="restore_in_progress">Geri yükleme devam ediyor</string>
     <string name="backup_downloaded">İndirilen verileri yedekleyin</string>

@@ -137,7 +137,7 @@
     <string name="about_us">Über uns</string>
     <string name="version">Version</string>
     <string name="github">Github</string>
-    <string name="Neoma_dev">Neoma Creative Hub</string>
+    <string name="maxrave_dev">Neoma Creative Hub</string>
     <string name="follow_me_on_x">Folge mir auf X</string>
     <string name="buy_me_a_coffee">Spendiere mir einen Kaffee</string>
     <string name="developer_blog">Entwickler-Blog</string>
@@ -516,8 +516,8 @@
     <string name="other_version">Andere Version</string>
     <string name="later">später</string>
     <string name="give_a_star">Gebe einen Stern</string>
-    <string name="enjoying_Neoma Beats">Spaß an Neoma Beats</string>
-    <string name="if_you_enjoy_using_Neoma Beats_star_Neoma Beats_on_github_or_leave_a_review_on">Wenn dir Neoma Beats gefällt, gib Neoma Beats einen Stern auf Github oder lasse eine Rezension da</string>
+    <string name="enjoying_simpmusic">Spaß an Neoma Beats</string>
+    <string name="if_you_enjoy_using_simpmusic_star_simpmusic_on_github_or_leave_a_review_on">Wenn dir Neoma Beats gefällt, gib Neoma Beats einen Stern auf Github oder lasse eine Rezension da</string>
     <string name="if_you_love_my_work_consider">"Wenn Dumeine Arbeit liebst, denk darüber nach "</string>
     <string name="buying_me_a_coffee">Mir einen Kaffee zu kaufen.</string>
     <string name="footguns_promo_title">Jede Falle, in die ich getappt bin</string>
@@ -587,8 +587,8 @@
     <string name="contributor_name">Name des Mitwirkenden</string>
     <string name="contributor_email">E-Mail des Mitwirkenden</string>
     <string name="anonymous">Anonym</string>
-    <string name="Neoma Beats_lyrics">Neoma Beats-Lyrics</string>
-    <string name="lyrics_provider_Neoma Beats">Songtexte von Neoma Beats-Lyrics bereitgestellt</string>
+    <string name="simpmusic_lyrics">Neoma Beats-Lyrics</string>
+    <string name="lyrics_provider_simpmusic">Songtexte von Neoma Beats-Lyrics bereitgestellt</string>
     <string name="backup_in_progress">Backup wird erstellt</string>
     <string name="restore_in_progress">Backup wird wiederhergestellt</string>
     <string name="backup_downloaded">Backup der heruntergeladenen Daten</string>
@@ -716,7 +716,7 @@
     <string name="local_tracking_description">Zeichne den Wiedergabeverlauf in der lokalen Datenbank auf</string>
     <string name="blog_notification_title">Benachrichtigungen zu Blogbeiträgen</string>
     <string name="blog_notification_description">Werde benachrichtigt wenn ein neuer Blog-Beitrag veröffentlicht wird</string>
-    <string name="Neoma Beats_charts">Neoma Beats Charts</string>
+    <string name="simpmusic_charts">Neoma Beats Charts</string>
     <string name="crossfading">Crossfading (überblenden)</string>
     <string name="your_320kbps_url">Deine 320kbps URL</string>
     <string name="your_320kbps_url_description">Lassen Sie das Feld leer, damit automatisch eine funktionierende URL aus dem Verfügbarkeitsprüfer ausgewählt wird.</string>

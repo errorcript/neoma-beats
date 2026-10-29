@@ -121,7 +121,7 @@
     <string name="about_us">درباره ما</string>
     <string name="version">نگارش</string>
     <string name="github">گیت‌هاب</string>
-    <string name="Neoma_dev">Neoma Creative Hub</string>
+    <string name="maxrave_dev">Neoma Creative Hub</string>
     <string name="buy_me_a_coffee">برای من یک قهوه بخر</string>
     <string name="developer_blog">وبلاگ توسعه دهنده</string>
     <string name="paypal">پی‌پال</string>
@@ -405,8 +405,8 @@
     <string name="other_version">نسخه دیگر</string>
     <string name="later">بعدا</string>
     <string name="give_a_star">ستاره بدید</string>
-    <string name="enjoying_Neoma Beats">از Neoma Beats لذت می‌بری</string>
-    <string name="if_you_enjoy_using_Neoma Beats_star_Neoma Beats_on_github_or_leave_a_review_on">اگر از استفاده از Neoma Beats لذت می‌برید، به Neoma Beats در GitHub ستاره دهید یا نظر خود را درباره آن بنویسید</string>
+    <string name="enjoying_simpmusic">از Neoma Beats لذت می‌بری</string>
+    <string name="if_you_enjoy_using_simpmusic_star_simpmusic_on_github_or_leave_a_review_on">اگر از استفاده از Neoma Beats لذت می‌برید، به Neoma Beats در GitHub ستاره دهید یا نظر خود را درباره آن بنویسید</string>
     <string name="if_you_love_my_work_consider">"اگر از کار من خوشتان می‌آید، لطفاً "</string>
     <string name="buying_me_a_coffee">یک قهوه برایم بخرید.</string>
     <string name="fade_audio_effect">افکت محو صدا</string>
@@ -451,8 +451,8 @@
     <string name="contributor_name">اسم مشارکت کننده</string>
     <string name="contributor_email">ایمیل مشارکت کننده</string>
     <string name="anonymous">ناشناس</string>
-    <string name="Neoma Beats_lyrics">متن ترانه‌های Neoma Beats</string>
-    <string name="lyrics_provider_Neoma Beats">متن ترانه‌ها ارائه شده توسط سرویس متن ترانه‌های Neoma Beats</string>
+    <string name="simpmusic_lyrics">متن ترانه‌های Neoma Beats</string>
+    <string name="lyrics_provider_simpmusic">متن ترانه‌ها ارائه شده توسط سرویس متن ترانه‌های Neoma Beats</string>
     <string name="backup_in_progress">پشتیبان گیری در حال انجام است</string>
     <!-- Listen Together -->
 </resources>

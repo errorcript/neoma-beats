@@ -139,7 +139,7 @@ android {
             // kuromoji-ipadic and the kuromoji-core it depends on, and mergeDebugJavaResource
             // refuses to pick between two files at one path. Excluded by pattern rather than by
             // name: dropping only CONTRIBUTORS.md moves the failure to LICENSE.md on the next
-            // build. Nothing here is code â€” these are documentation files.
+            // build. Nothing here is code - these are documentation files.
             excludes += "META-INF/*.md"
             // kuromoji's ipadic dictionary is ~13 MB of .bin resources â€” the whole reason the APK
             // grew by 14.4 MB. Android fetches the same eight files on demand instead (see
@@ -259,7 +259,7 @@ if (!isFullBuild) {
                 println("Deleted: ${injectSentryFile.absolutePath}")
                 val sentryFile = File(injectBuildAssetsDir, "sentry-debug-meta.properties")
                 sentryFile.writeText("")
-                println("âœ“ Overwritten: ${sentryFile.absolutePath}")
+                println("OK - Overwritten: ${sentryFile.absolutePath}")
             }
         }
     }

@@ -121,7 +121,7 @@
     <string name="about_us">За нас</string>
     <string name="version">Версия</string>
     <string name="github">Github</string>
-    <string name="Neoma_dev">Neoma Creative Hub</string>
+    <string name="maxrave_dev">Neoma Creative Hub</string>
     <string name="buy_me_a_coffee">Buy me a coffee</string>
     <string name="paypal">PayPal</string>
     <string name="title">Заглавие</string>
@@ -394,8 +394,8 @@
     <string name="other_version">Друга версия</string>
     <string name="later">По-късно</string>
     <string name="give_a_star">Оцени</string>
-    <string name="enjoying_Neoma Beats">Доволни от Neoma Beats</string>
-    <string name="if_you_enjoy_using_Neoma Beats_star_Neoma Beats_on_github_or_leave_a_review_on">Оценете Neoma Beats в GitHub или оставете ревю ако сте доволни</string>
+    <string name="enjoying_simpmusic">Доволни от Neoma Beats</string>
+    <string name="if_you_enjoy_using_simpmusic_star_simpmusic_on_github_or_leave_a_review_on">Оценете Neoma Beats в GitHub или оставете ревю ако сте доволни</string>
     <string name="if_you_love_my_work_consider">"Ако сте доволни от работата ми, моля помислете да "</string>
     <string name="buying_me_a_coffee">ме почерпите кафе.</string>
     <string name="fade_audio_effect">Постепенно намаляване на звука</string>

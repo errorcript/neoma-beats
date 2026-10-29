@@ -121,7 +121,7 @@
     <string name="about_us">정보</string>
     <string name="version">버전</string>
     <string name="github">Github</string>
-    <string name="Neoma_dev">Neoma Creative Hub</string>
+    <string name="maxrave_dev">Neoma Creative Hub</string>
     <string name="buy_me_a_coffee">Buy me a coffee</string>
     <string name="developer_blog">개발자 블로그</string>
     <string name="developer_blog_tagline">개발 노트, 튜토리얼 &amp; 비하인드 스토리를 읽어보세요</string>
@@ -421,8 +421,8 @@
     <string name="other_version">다른 버전</string>
     <string name="later">나중에</string>
     <string name="give_a_star">별 주기</string>
-    <string name="enjoying_Neoma Beats">Neoma Beats을 즐기고 계신가요</string>
-    <string name="if_you_enjoy_using_Neoma Beats_star_Neoma Beats_on_github_or_leave_a_review_on">Neoma Beats을 잘 이용하고 계신다면, GitHub에서 Neoma Beats에 별을 주거나 리뷰를 남겨주세요</string>
+    <string name="enjoying_simpmusic">Neoma Beats을 즐기고 계신가요</string>
+    <string name="if_you_enjoy_using_simpmusic_star_simpmusic_on_github_or_leave_a_review_on">Neoma Beats을 잘 이용하고 계신다면, GitHub에서 Neoma Beats에 별을 주거나 리뷰를 남겨주세요</string>
     <string name="if_you_love_my_work_consider">"앱이 마음에 드시면, "</string>
     <string name="buying_me_a_coffee">커피 한 잔으로 응원해주세요.</string>
     <string name="fade_audio_effect">음향 페이드 효과</string>
@@ -476,8 +476,8 @@
     <string name="contributor_name">기여자 이름</string>
     <string name="contributor_email">기여자 메일</string>
     <string name="anonymous">익명</string>
-    <string name="Neoma Beats_lyrics">Neoma Beats 가사</string>
-    <string name="lyrics_provider_Neoma Beats">Neoma Beats 가사에서 제공된 가사</string>
+    <string name="simpmusic_lyrics">Neoma Beats 가사</string>
+    <string name="lyrics_provider_simpmusic">Neoma Beats 가사에서 제공된 가사</string>
     <string name="backup_in_progress">백업 진행 중</string>
     <string name="restore_in_progress">복원 진행 중</string>
     <string name="backup_downloaded">다운로드한 데이터 백업</string>
@@ -578,7 +578,7 @@
     <string name="local_tracking_description">로컬 데이터베이스에 나의 재생 기록 저장</string>
     <string name="blog_notification_title">블로그 포스트 알림</string>
     <string name="blog_notification_description">새로운 블로그가 올라오면 알림 받기</string>
-    <string name="Neoma Beats_charts">Neoma Beats 차트</string>
+    <string name="simpmusic_charts">Neoma Beats 차트</string>
     <string name="crossfading">크로스페이드 중</string>
     <string name="your_320kbps_url">320kbps URL</string>
     <string name="your_320kbps_url_description">가동 시간 검사기에서 작동하는 URL을 자동으로 선택하려면 비워 두세요.</string>

@@ -48,6 +48,7 @@ jobs:
           sed -i 's|https://github.com/maxrave-dev/SimpMusic|https://github.com/errorcript/neoma-beats|g' core/service/kizzy/src/commonMain/kotlin/com/my/kizzy/DiscordRPC.kt || true
           sed -i 's|https://simpmusic.org/app/|https://beats.neoma.space/|g' core/service/kizzy/src/commonMain/kotlin/com/my/kizzy/DiscordRPC.kt || true
           sed -i 's|https://simpmusic.org/app/|https://beats.neoma.space/|g' core/service/kotlinYtmusicScraper/src/commonMain/kotlin/com/maxrave/kotlinytmusicscraper/models/YTItem.kt || true
+          sed -i 's/preferences\[ENDLESS_QUEUE\] ?: FALSE/preferences\[ENDLESS_QUEUE\] ?: TRUE/g' core/data/src/commonMain/kotlin/com/maxrave/data/dataStore/DataStoreManagerImpl.kt || true
 
       - name: Build Release APK
         run: ./gradlew androidApp:assembleRelease -PisFullBuild=false --no-daemon --stacktrace

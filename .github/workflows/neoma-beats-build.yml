@@ -37,7 +37,7 @@ jobs:
       - name: Generate Library Definitions
         run: ./gradlew exportLibraryDefinitions -PisFullBuild=false
 
-            - name: Patch Core Service Endpoints (Neoma Release & Branding)
+      - name: Patch Core Service Endpoints (Neoma Release & Branding)
         run: |
           sed -i 's|https://api.github.com/repos/maxrave-dev/SimpMusic/releases/latest|https://api.github.com/repos/errorcript/neoma-beats/releases/latest|g' core/service/kotlinYtmusicScraper/src/commonMain/kotlin/com/maxrave/kotlinytmusicscraper/Ytmusic.kt || true
           sed -i 's|https://raw.githubusercontent.com/maxrave-dev/simpmusic-files/refs/heads/main/remote-config.json|https://raw.githubusercontent.com/errorcript/neoma-beats/dev/remote-config.json|g' core/service/kotlinYtmusicScraper/src/commonMain/kotlin/com/maxrave/kotlinytmusicscraper/Ytmusic.kt || true

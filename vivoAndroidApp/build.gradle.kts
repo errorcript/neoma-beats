@@ -29,7 +29,7 @@ android {
     defaultConfig {
         applicationId = "com.spotify.music"
         minSdk = 26
-        targetSdk = 35
+        targetSdk = 36
         versionCode =
             libs.versions.version.code
                 .get()

@@ -45,8 +45,10 @@ jobs:
           BUILD_TOOL_PATH=$(ls -d /usr/local/lib/android/sdk/build-tools/* | tail -n 1)
           echo "Using Android Build Tools: $BUILD_TOOL_PATH"
           
-          # Generate self-contained release keystore
-          keytool -genkey -v -keystore neoma-release.jks -alias neomabeats -keyalg RSA -keysize 2048 -validity 10000 -storepass neoma2026 -keypass neoma2026 -dname "CN=Neoma Beats, OU=Neoma Labs, O=Neoma Creative Hub, L=Solo, ST=Jawa Tengah, C=ID"
+          # Use committed persistent release keystore if present, else fallback
+          if [ ! -f neoma-release.jks ]; then
+            keytool -genkey -v -keystore neoma-release.jks -alias neomabeats -keyalg RSA -keysize 2048 -validity 10000 -storepass neoma2026 -keypass neoma2026 -dname "CN=Neoma Beats, OU=Neoma Labs, O=Neoma Creative Hub, L=Solo, ST=Jawa Tengah, C=ID"
+          fi
           
           # Find the unsigned release apk (prioritize universal or standard release)
           RAW_APK=$(find androidApp/build/outputs/apk/release -name "*universal*.apk" | head -n 1)
@@ -79,7 +81,7 @@ jobs:
           tag_name: v1.0.0
           name: "Neoma Beats v1.0.0 (Official Rebranded Release)"
           body: |
-            ## 🎵 Neoma Beats v1.0.0 (Official Release)
+            ## ðŸŽµ Neoma Beats v1.0.0 (Official Release)
             
             - **Brand**: Official Neoma Beats Crescent Equalizer Moon Identity
             - **Engine**: 100% Ad-Free YouTube Music Stream with Background Playback

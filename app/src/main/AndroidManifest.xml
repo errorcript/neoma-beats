@@ -86,9 +86,5 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/filepaths" />
         </provider>
-
-        <service
-            android:name="com.google.androidbrowserhelper.trusted.FocusActivity"
-            android:exported="false" />
     </application>
 </manifest>

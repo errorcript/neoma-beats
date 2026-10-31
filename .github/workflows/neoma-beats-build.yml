@@ -28,7 +28,21 @@ jobs:
         run: chmod +x ./gradlew
 
       - name: Build Release APK
-        run: ./gradlew :app:assembleRelease --stacktrace --info
+        run: |
+          set -o pipefail
+          ./gradlew :app:assembleRelease --stacktrace 2>&1 | tee build_log.txt
+
+      - name: Capture Failure Logs to Branch
+        if: failure()
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git checkout --orphan build-logs
+          git rm -rf . || true
+          cp build_log.txt error_log.txt
+          git add error_log.txt
+          git commit -m "build failure logs"
+          git push -f origin build-logs
 
       - name: Prepare Signed Release APK
         run: |

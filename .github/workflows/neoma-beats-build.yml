@@ -30,24 +30,21 @@ jobs:
           chmod +x ./gradlew
           ./gradlew :app:assembleRelease --no-daemon --stacktrace
 
-      - name: Sign APK with Neoma Keystore
+      - name: Verify and Package APK
         run: |
           BUILD_TOOL_PATH=$(ls -d /usr/local/lib/android/sdk/build-tools/* | tail -n 1)
           echo "Using Android Build Tools: $BUILD_TOOL_PATH"
           
-          # Use committed persistent release keystore if present, else generate
-          if [ ! -f neoma-release.jks ]; then
-            keytool -genkey -v -keystore neoma-release.jks -alias neomabeats -keyalg RSA -keysize 2048 -validity 10000 -storepass neoma2026 -keypass neoma2026 -dname "CN=Neoma Beats, OU=Neoma Labs, O=Neoma Creative Hub, L=Solo, ST=Jawa Tengah, C=ID"
-          fi
-          
           RAW_APK=$(find app/build/outputs/apk/release -name "*.apk" | head -n 1)
-          echo "Selected APK to sign: $RAW_APK"
+          echo "Found APK: $RAW_APK"
           
-          # Zipalign
-          $BUILD_TOOL_PATH/zipalign -v -p 4 "$RAW_APK" neoma-beats-aligned.apk
+          cp "$RAW_APK" neoma-beats-v2.6.0.apk
           
-          # Sign
-          $BUILD_TOOL_PATH/apksigner sign --ks neoma-release.jks --ks-pass pass:neoma2026 --key-pass pass:neoma2026 --ks-key-alias neomabeats --out neoma-beats-v2.6.0.apk neoma-beats-aligned.apk
+          echo "Verifying APK Signature..."
+          $BUILD_TOOL_PATH/apksigner verify --verbose neoma-beats-v2.6.0.apk || {
+            echo "Signing fallback..."
+            $BUILD_TOOL_PATH/apksigner sign --ks neoma-release.jks --ks-pass pass:neoma2026 --key-pass pass:neoma2026 --ks-key-alias neomabeats neoma-beats-v2.6.0.apk
+          }
           
           ls -la neoma-beats-v2.6.0.apk
 
@@ -67,7 +64,7 @@ jobs:
             ## 🎵 Neoma Beats v2.6.0 (Official Native Hybrid Release)
             
             - **100% Web Identical UI**: Matches https://beats.neoma.space with Live Jam Sessions, Pomodoro Timer, Ambient Focus Sounds, and Synced Lyrics.
-            - **Native Background Playback**: Screen off in pocket, multitasking in other apps, audio keeps playing smoothly.
+            - **Native Background Playback**: Screen off in pocket, multitasking in other apps, audio keeps playing smoothly without pausing.
             - **Offline Mode**: Download songs to local device storage for zero-buffering offline listening.
             - **Lockscreen & Notification Bar**: Real-time media controls with album artwork.
             - **Package**: `space.neoma.beats`

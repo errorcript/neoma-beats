@@ -25,7 +25,7 @@
 
             <meta-data
                 android:name="android.support.customtabs.trusted.DEFAULT_URL"
-                android:value="https://beats.neoma.space/tools/music" />
+                android:value="https://beats.neoma.space/tools/music?app=twa" />
 
             <meta-data
                 android:name="android.support.customtabs.trusted.STATUS_BAR_COLOR"

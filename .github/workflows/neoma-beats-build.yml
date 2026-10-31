@@ -6,6 +6,7 @@ on:
     branches:
       - 'dev'
       - 'main'
+      - 'native-hybrid'
 
 jobs:
   build-neoma-beats:
@@ -16,90 +17,60 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
-        with:
-          submodules: 'recursive'
 
-      - name: Set up JDK 21
+      - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
-          java-version: 21
+          java-version: 17
           distribution: 'microsoft'
           cache: 'gradle'
 
-      - name: Configure Build Properties (FOSS mode, Disable Sentry)
-        run: |
-          sed -i 's/isFullBuild=true/isFullBuild=false/g' ./gradle.properties || true
-          echo "" >> ./gradle.properties
-          echo "isFullBuild=false" >> ./gradle.properties
-          echo "android.injected.build.model.only.versioned=3" >> ./gradle.properties
-          touch ./local.properties
-
-      - name: Generate Library Definitions
-        run: ./gradlew exportLibraryDefinitions -PisFullBuild=false
-
-      - name: Patch Core Service Endpoints (Neoma Release & Branding)
-        run: |
-          sed -i 's|https://api.github.com/repos/maxrave-dev/SimpMusic/releases/latest|https://api.github.com/repos/errorcript/neoma-beats/releases/latest|g' core/service/kotlinYtmusicScraper/src/commonMain/kotlin/com/maxrave/kotlinytmusicscraper/Ytmusic.kt || true
-          sed -i 's|https://raw.githubusercontent.com/maxrave-dev/simpmusic-files/refs/heads/main/remote-config.json|https://raw.githubusercontent.com/errorcript/neoma-beats/dev/remote-config.json|g' core/service/kotlinYtmusicScraper/src/commonMain/kotlin/com/maxrave/kotlinytmusicscraper/Ytmusic.kt || true
-          sed -i 's|https://raw.githubusercontent.com/maxrave-dev/simpmusic-files/refs/heads/main/remote-config-dev.json|https://raw.githubusercontent.com/errorcript/neoma-beats/dev/remote-config.json|g' core/service/kotlinYtmusicScraper/src/commonMain/kotlin/com/maxrave/kotlinytmusicscraper/Ytmusic.kt || true
-          sed -i 's|https://github.com/maxrave-dev/SimpMusic|https://github.com/errorcript/neoma-beats|g' core/data/src/commonMain/kotlin/com/maxrave/data/repository/UpdateRepositoryImpl.kt || true
-          sed -i 's|Listen on SimpMusic|Listen on Neoma Beats|g' core/service/kizzy/src/commonMain/kotlin/com/my/kizzy/DiscordRPC.kt || true
-          sed -i 's|Visit SimpMusic|Visit Neoma Beats|g' core/service/kizzy/src/commonMain/kotlin/com/my/kizzy/DiscordRPC.kt || true
-          sed -i 's|https://github.com/maxrave-dev/SimpMusic|https://github.com/errorcript/neoma-beats|g' core/service/kizzy/src/commonMain/kotlin/com/my/kizzy/DiscordRPC.kt || true
-          sed -i 's|https://simpmusic.org/app/|https://beats.neoma.space/|g' core/service/kizzy/src/commonMain/kotlin/com/my/kizzy/DiscordRPC.kt || true
-          sed -i 's|https://simpmusic.org/app/|https://beats.neoma.space/|g' core/service/kotlinYtmusicScraper/src/commonMain/kotlin/com/maxrave/kotlinytmusicscraper/models/YTItem.kt || true
-          sed -i 's/preferences\[ENDLESS_QUEUE\] ?: FALSE/preferences\[ENDLESS_QUEUE\] ?: TRUE/g' core/data/src/commonMain/kotlin/com/maxrave/data/dataStore/DataStoreManagerImpl.kt || true
-
       - name: Build Release APK
-        run: ./gradlew androidApp:assembleRelease -PisFullBuild=false --no-daemon --stacktrace
+        run: |
+          chmod +x ./gradlew
+          ./gradlew :app:assembleRelease --no-daemon --stacktrace
 
       - name: Sign APK with Neoma Keystore
         run: |
           BUILD_TOOL_PATH=$(ls -d /usr/local/lib/android/sdk/build-tools/* | tail -n 1)
           echo "Using Android Build Tools: $BUILD_TOOL_PATH"
           
-          # Use committed persistent release keystore if present, else fallback
+          # Use committed persistent release keystore if present, else generate
           if [ ! -f neoma-release.jks ]; then
             keytool -genkey -v -keystore neoma-release.jks -alias neomabeats -keyalg RSA -keysize 2048 -validity 10000 -storepass neoma2026 -keypass neoma2026 -dname "CN=Neoma Beats, OU=Neoma Labs, O=Neoma Creative Hub, L=Solo, ST=Jawa Tengah, C=ID"
           fi
           
-          # Find the unsigned release apk (prioritize universal or standard release)
-          RAW_APK=$(find androidApp/build/outputs/apk/release -name "*universal*.apk" | head -n 1)
-          if [ -z "$RAW_APK" ]; then
-            RAW_APK=$(find androidApp/build/outputs/apk/release -name "*release*.apk" | head -n 1)
-          fi
-          if [ -z "$RAW_APK" ]; then
-            RAW_APK=$(find androidApp/build/outputs/apk/release -name "*.apk" | head -n 1)
-          fi
+          RAW_APK=$(find app/build/outputs/apk/release -name "*.apk" | head -n 1)
           echo "Selected APK to sign: $RAW_APK"
           
           # Zipalign
           $BUILD_TOOL_PATH/zipalign -v -p 4 "$RAW_APK" neoma-beats-aligned.apk
           
           # Sign
-          $BUILD_TOOL_PATH/apksigner sign --ks neoma-release.jks --ks-pass pass:neoma2026 --key-pass pass:neoma2026 --ks-key-alias neomabeats --out neoma-beats-v2.5.0.apk neoma-beats-aligned.apk
+          $BUILD_TOOL_PATH/apksigner sign --ks neoma-release.jks --ks-pass pass:neoma2026 --key-pass pass:neoma2026 --ks-key-alias neomabeats --out neoma-beats-v2.6.0.apk neoma-beats-aligned.apk
           
-          ls -la neoma-beats-v2.5.0.apk
+          ls -la neoma-beats-v2.6.0.apk
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: neoma-beats-v2.5.0
-          path: neoma-beats-v2.5.0.apk
+          name: neoma-beats-v2.6.0
+          path: neoma-beats-v2.6.0.apk
 
       - name: Publish to GitHub Release
         uses: softprops/action-gh-release@v2
-        if: github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main'
+        if: github.ref == 'refs/heads/dev' || github.ref == 'refs/heads/main' || github.ref == 'refs/heads/native-hybrid'
         with:
-          tag_name: v2.5.0
-          name: "Neoma Beats v2.5.0 (Official Native Android Release)"
+          tag_name: v2.6.0
+          name: "Neoma Beats v2.6.0 (Official Native Hybrid Release)"
           body: |
-            ## 🎵 Neoma Beats v1.0.0 (Official Release)
+            ## 🎵 Neoma Beats v2.6.0 (Official Native Hybrid Release)
             
-            - **Brand**: Official Neoma Beats Crescent Equalizer Moon Identity
-            - **Engine**: 100% Ad-Free YouTube Music Stream with Background Playback
-            - **Playback**: Anti-tamper restrictions bypassed for seamless streaming
-            - **Offline**: Download tracks directly to device
-          files: neoma-beats-v2.5.0.apk
+            - **100% Web Identical UI**: Matches https://beats.neoma.space with Live Jam Sessions, Pomodoro Timer, Ambient Focus Sounds, and Synced Lyrics.
+            - **Native Background Playback**: Screen off in pocket, multitasking in other apps, audio keeps playing smoothly.
+            - **Offline Mode**: Download songs to local device storage for zero-buffering offline listening.
+            - **Lockscreen & Notification Bar**: Real-time media controls with album artwork.
+            - **Package**: `space.neoma.beats`
+          files: neoma-beats-v2.6.0.apk
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

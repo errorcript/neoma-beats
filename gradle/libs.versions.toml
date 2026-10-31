@@ -264,6 +264,7 @@ androidx-mediarouter = { group = "androidx.mediarouter", name = "mediarouter", v
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "android" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 android-library = { id = "com.android.library", version.ref = "android" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "serialization" }

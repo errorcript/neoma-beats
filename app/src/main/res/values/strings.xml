@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Neoma Beats</string>
+    <string name="channel_name">Neoma Beats Audio Playback</string>
+    <string name="channel_description">Notifikasi pemutaran audio di latar belakang untuk Neoma Beats</string>
+</resources>

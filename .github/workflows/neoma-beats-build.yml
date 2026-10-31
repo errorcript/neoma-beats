@@ -30,23 +30,11 @@ jobs:
       - name: Build Release APK
         run: ./gradlew :app:assembleRelease --no-daemon --stacktrace
 
-      - name: Verify & Sign Release APK
+      - name: Prepare Signed Release APK
         run: |
-          BUILD_TOOL_PATH=$(ls -d /usr/local/lib/android/sdk/build-tools/* | tail -n 1)
-          echo "Using Android Build Tools: $BUILD_TOOL_PATH"
-          
-          RAW_APK=$(find app/build/outputs/apk/release -name "*.apk" | head -n 1)
-          echo "Raw APK: $RAW_APK"
-          
-          # Zipalign
-          $BUILD_TOOL_PATH/zipalign -v -p 4 "$RAW_APK" neoma-beats-aligned.apk
-          
-          # Sign using official persistent keystore
-          $BUILD_TOOL_PATH/apksigner sign --ks neoma-release.jks --ks-pass pass:neoma2026 --key-pass pass:neoma2026 --ks-key-alias neomabeats --out neoma-beats-v2.0.0.apk neoma-beats-aligned.apk
-          
-          # Verify signature
-          $BUILD_TOOL_PATH/apksigner verify -v neoma-beats-v2.0.0.apk
-          
+          SIGNED_APK=$(find app/build/outputs/apk/release -name "*.apk" | head -n 1)
+          echo "Found signed APK at: $SIGNED_APK"
+          cp "$SIGNED_APK" neoma-beats-v2.0.0.apk
           ls -lh neoma-beats-v2.0.0.apk
 
       - name: Upload APK Artifact
@@ -64,7 +52,7 @@ jobs:
           body: |
             ## 🎵 Neoma Beats v2.0.0 Official Release (Web-Identical TWA)
 
-            Aplikasi resmi Android Neoma Beats yang membawa **100% fitur website beats.neoma.space** ke perangkat Android lu:
+            Aplikasi resmi Android Neoma Beats yang membawa **100% fitur website beats.neoma.space** ke perangkat Android:
 
             - 🎧 **Dengar Bareng (Live Vibe Session)**: Sinkronisasi real-time via P2P Supabase WebSocket.
             - 🌧️ **Ambient Soundscapes**: Suara latar Hujan, Vinyl Crackle, Api Unggun, dan Cafe Drone.

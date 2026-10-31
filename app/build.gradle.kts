@@ -21,7 +21,7 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file("../neoma-release.jks")
+            storeFile = file("${rootDir}/neoma-release.jks")
             storePassword = "neoma2026"
             keyAlias = "neomabeats"
             keyPassword = "neoma2026"
@@ -47,4 +47,6 @@ android {
 dependencies {
     implementation("com.google.androidbrowserhelper:androidbrowserhelper:2.5.0")
     implementation("androidx.browser:browser:1.8.0")
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("androidx.core:core:1.15.0")
 }
